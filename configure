@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+
+import os
+
+contents = os.listdir()
+
+for eachContent in contents :
+    if os.path.isfile(eachContent):
+        execute = "cp "+eachContent+" -v ~/Videos"
+        os.system(execute)
+        print("moved",eachContent,"to the appropriate folder")
+    else :
+        print (eachContent,"is a folder")
