@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+
+import os
+
+contents = os.listdir()
+
+for eachContent in contents :
+    if eachContent == "configure" :
+        print ("configure file wont Copy")
+
+    elif os.path.isfile(eachContent):
+        execute = "cp "+eachContent+" -v ~/"
+        os.system(execute)
+        print("Copying",eachContent,"to the appropriate folder")
+        
+    else:
+        print("nothing to move")
+    
