@@ -5,9 +5,14 @@ import os
 contents = os.listdir()
 
 for eachContent in contents :
-    if os.path.isfile(eachContent):
-        execute = "cp "+eachContent+" -v ~/Videos"
+    if eachContent == "configure" :
+        print ("configure file wont Copy")
+
+    elif os.path.isfile(eachContent):
+        execute = "cp "+eachContent+" -v ~/"
         os.system(execute)
-        print("moved",eachContent,"to the appropriate folder")
-    else :
-        print (eachContent,"is a folder")
+        print("Copying",eachContent,"to the appropriate folder")
+        
+    else:
+        print("nothing to move")
+    
