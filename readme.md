@@ -1,4 +1,4 @@
-## .Dotfiles
+## .Dotfiles 💠
 
 A repo for managing all the dotfiles on my current system 💻
 
@@ -14,6 +14,8 @@ step 2: `cd .dotfiles`
 
 step 3: `chmod +x configure`
 
-step 4: chill ☕ and let it do it's thing
+step 4: `./configure`
 
-step 5: restart the system (not mandatory)
+step 5: chill ☕ and let it do its thing
+
+step 6: restart the system (not mandatory but recommended)
