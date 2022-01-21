@@ -18,10 +18,10 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #00
-#background-alt = #444
+background = #222
+background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #ffffff
+foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
@@ -30,10 +30,10 @@ alert = #bd2c40
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 25
+height = 28
 ;offset-x = 1%
 ;offset-y = 1%
-#radius = 6.0
+radius = 6.0
 fixed-center = false
 
 background = ${colors.background}
@@ -52,11 +52,11 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
-font-1 = Font Awesome 5 Free:pixelsize=12
-font-2 = Font Awesome 5 Free Solid:pixelsize=12
-font-3 = Font Awesome 5 Free Brands:pixelsize=12
-font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-5 = siji:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Free:pixelsize=12;2
+font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
+font-5 = Font Awesome 5 Free Brands:pixelsize=12;2
 
 modules-left = bspwm
 modules-center = date
@@ -106,7 +106,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = : %percentage_used%%
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -216,17 +216,17 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = #ffffff
-#format-underline = #f90000
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #f90000
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = #ffffff
-#format-underline = #4bffc
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #4bffdc
 label = %percentage_used%%
 
 [module/wlan]
@@ -269,7 +269,7 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 1
+interval = 5
 
 date =
 date-alt = " %d-%m-%Y"
@@ -277,21 +277,21 @@ date-alt = " %d-%m-%Y"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = #ffffff
-#format-underline = #0a6cf5
+format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
 
 label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume>
-label-volume =  %percentage%%
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted =  0%
-label-muted-foreground = #ffffff
+label-muted = 🔇 muted
+label-muted-foreground = #666
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -308,7 +308,7 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground}
+bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/alsa]
 type = internal/alsa
@@ -397,8 +397,8 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
-label-open-foreground = #ffffff
+label-open = 
+label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
