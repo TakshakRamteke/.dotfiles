@@ -129,7 +129,7 @@ super + shift + alt + {Left,Down,Up,Right}
 # keybinding for applications
 #
 # start firefox
-super + shift + f
+super + shift + b
 	firefox
 
 # start ranger
