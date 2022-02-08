@@ -18,13 +18,17 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Viewnior state=floating
+bspc rule -a scrcpy state=floating
 bspc rule -a firefox desktop='^2'
-bspc rule -a Thunar desktop='^3'
-bspc rule -a Code desktop='^4'
-bspc rule -a Gimp desktop='^6' state=floating follow=on
-bspc rule -a Inkscape dekstop='^6'
+bspc rule -a Code desktop='^3'
+bspc rule -a Insomnia desktop='^4'
+bspc rule -a obsidian desktop='^5'
+bspc rule -a Thunar desktop='^6'
+bspc rule -a Gimp desktop='^7' state=floating follow=on
+bspc rule -a Inkscape dekstop='^7'
 bspc rule -a discord desktop='^8'
 bspc rule -a obs desktop='^8'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
