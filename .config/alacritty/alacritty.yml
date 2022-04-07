@@ -60,7 +60,7 @@ schemes:
 
 colors: *tokyo-night-storm
 
-background_opacity: 0.95
+  #background_opacity: 0.95
 
 window:
   padding:
