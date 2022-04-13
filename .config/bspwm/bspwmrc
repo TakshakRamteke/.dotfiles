@@ -2,9 +2,12 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+xrandr --output DP1 --off --output DP2 --mode 1280x1024 --pos 1920x56 --rotate normal --output HDMI1 --off --output HDMI2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+
 $HOME/.config/polybar/launch.sh
 
-bspc monitor -d I II III IV V VI VII VIII
+bspc monitor HDMI2 -d I II III IV V VI VII
+bspc monitor DP2 -d VIII XI
 
 bspc config border_width         1 
 bspc config window_gap          10
