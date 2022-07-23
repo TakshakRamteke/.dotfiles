@@ -132,10 +132,10 @@ super + shift + alt + {Left,Down,Up,Right}
 super + shift + b
 	firefox
 
-# start ranger
-#
-super + shift + r
-	alacritty -e ranger
+# emoji selector
+super + shift + e
+	rofi -show emoji
+
 
 # Screenshots
 
