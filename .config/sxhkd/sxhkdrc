@@ -136,6 +136,10 @@ super + shift + b
 super + shift + e
 	rofi -show emoji
 
+# calculator
+super + shift + c
+	rofi -show calc
+
 
 # Screenshots
 
