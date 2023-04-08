@@ -4,7 +4,7 @@ import os
 
 contents = os.listdir()
 
-app = ["neovim","zsh","inkscape","gimp"]
+app = ["neovim","zsh","alacritty","git","sxhkd","bspwm","i3"]
 
 package_manager = input("What's the package manager for this machine ? : ")
 
