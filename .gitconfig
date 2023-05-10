@@ -1,3 +1,5 @@
 [user]
 	email = takshakramteke0708@gmail.com
 	name = TakshakRamteke
+[protocol "file"]
+	allow = always
