@@ -4,27 +4,27 @@ import os
 
 contents = os.listdir()
 
-app = ["neovim","alacritty","git","i3","gdm","zsh"]
+app = ["neovim", "alacritty", "git", "gdm", "zsh", "hyprland", "pulseaudio-bluetooth", "nwg-look", "hyprqt6enginer",
+       "qt5-wayland", "qt6-wayland", "hyprpolkitagent", "hyprpaper", "dunst", "hyprlauncher", "xdg-desktop-portal-hyprland"]
 
 package_manager = input("What's the package manager for this machine ? : ")
 
-for eachApp in app :
-    
+for eachApp in app:
+
     if package_manager == 'pacman':
         installApp = "sudo "+package_manager+" -S "+eachApp
-    else: 
+    else:
         installApp = "sudo "+package_manager+" install "+eachApp
     os.system(installApp)
 
-for eachContent in contents :
-    if eachContent == "configure" :
-        print ("configure file wont Copy")
+for eachContent in contents:
+    if eachContent == "configure":
+        print("configure file wont Copy")
 
     elif os.path.isfile(eachContent):
         execute = "cp "+eachContent+" -v ~/"
         os.system(execute)
-        print("Copying",eachContent,"to the appropriate folder")
-        
+        print("Copying", eachContent, "to the appropriate folder")
+
     else:
         print("nothing to move")
-    

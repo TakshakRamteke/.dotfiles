@@ -1,0 +1,16 @@
+log_level = "warn"
+position = "Top"
+
+[modules]
+left = [ "WindowTitle"  ]
+center = [ "Workspaces"]
+right = [ "SystemInfo", [  "Tray", "Clock", "Privacy", "Settings" ] ]
+
+[workspaces]
+enable_workspace_filling = true
+max_workspaces = 5
+workspace_names = ["\uf120","\ueb01","\ueb60","\uea73","\uf4f5"]
+
+[window_title]
+truncate_title_after_length = 70
+
